@@ -17,3 +17,8 @@ test("equal this object", () => {
   data['profession'] = 'Software Engineer'
   expect(data).toEqual({name: 'Daniel', age: 35, profession: 'Software Engineer'})
 })
+
+test("to be falsy", () => {
+  const n = null;
+  expect(n).toBeFalsy()
+})
