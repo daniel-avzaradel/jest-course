@@ -9,3 +9,13 @@ test("To Equal", () => {
   data['profession'] = "Software Engineer";
   expect(data).toEqual({ name: "Daniel", age: 35, profession: "Software Engineer" });
 });
+
+test("to be falsy", () => {
+  let n = null;
+  expect(n).toBeFalsy()
+})
+
+test("to be falsy", () => {
+  let n = 0;
+  expect(n).toBeFalsy()
+})
