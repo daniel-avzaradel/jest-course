@@ -1,4 +1,4 @@
-const {sum} = require('./sum');
+const {sum, myFunction} = require('./sum');
 
 test("Sum", () => {
   expect(sum(4, 6)).toBe(10);
@@ -15,7 +15,18 @@ test("to be falsy", () => {
   expect(n).toBeFalsy()
 })
 
-test("to be falsy", () => {
+test("Zero is falsy", () => {
   let n = 0;
   expect(n).toBeFalsy()
+})
+
+test("To be truthy", () => {
+  let n = 1;
+  expect(n).toBeTruthy()
+})
+
+test("Throw an invalid input", () => {
+  expect(() => {
+    myFunction('invalidInput');
+  }).toThrow()
 })
