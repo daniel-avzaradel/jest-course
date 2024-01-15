@@ -57,5 +57,6 @@ mockCallback(2);
 
 test("testing with mock functions", () => {
   const mock = jest.fn(x => 42 + x);
-  expect(mock(2)).toBe(44)
+  expect(mock(2)).toBe(44);
+  expect(mock).toHaveBeenCalledWith(2)
 })
