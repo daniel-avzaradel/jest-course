@@ -49,3 +49,13 @@ test("fetch Promise", async () => {
   expect(data).toBe('peanut butter');
 });
 
+// mock functions and spies
+
+const mockCallback = jest.fn(x => 42 + x);
+mockCallback(0);
+mockCallback(2);
+
+test("testing with mock functions", () => {
+  const mock = jest.fn(x => 42 + x);
+  expect(mock(2)).toBe(44)
+})
