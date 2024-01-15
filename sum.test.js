@@ -1,4 +1,4 @@
-const {sum, myFunction} = require('./sum');
+const {sum, myFunction, fetchData} = require('./sum');
 
 test("Sum", () => {
   expect(sum(4, 6)).toBe(10);
@@ -30,3 +30,16 @@ test("Throw an invalid input", () => {
     myFunction('invalidInput');
   }).toThrow()
 })
+
+test("fetch data async", done => {
+  function callback(data) {
+    try {
+      expect(data).toBe('peanut butter');
+      done();
+    } catch (error) {
+      done(error)
+    }
+  }
+
+  fetchData(callback);
+});

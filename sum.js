@@ -6,9 +6,16 @@ function myFunction (input) {
     if (typeof input !== 'number') {
       throw new Error('invalid input')
     }
-  }
+}
+
+function fetchData(callback) {
+    setTimeout(() => {
+        callback('peanut butter');
+    }, 1000)
+}
 
 module.exports = {
     sum,
-    myFunction
+    myFunction,
+    fetchData
 }
